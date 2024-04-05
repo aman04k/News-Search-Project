@@ -9,7 +9,7 @@ const searchButton = document.getElementById("search-button");
 
 async function fetchRandomNews() {
     try {
-        const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&pageSize=100&apiKey=${apiKey}`; // Limit to 10 articles for better performance
+        const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&pageSize=10&apiKey=${apiKey}`; // Limit to 10 articles for better performance
         const response = await fetch(apiUrl);
         if (!response.ok) {
             throw new Error("Failed to fetch news");
@@ -36,7 +36,7 @@ searchButton.addEventListener("click", async () => {
 
  async function fetchNewsQuery(query){
     try {
-        const apiUrl = `https://newsapi.org/v2/everything?q=${query}&pageSize=100&apiKey=${apiKey}`; // Limit to 10 articles for better performance
+        const apiUrl = `https://newsapi.org/v2/everything?q=${query}&pageSize=10&apiKey=${apiKey}`; // Limit to 10 articles for better performance
         const response = await fetch(apiUrl);
         if (!response.ok) {
             throw new Error("Failed to fetch news");
