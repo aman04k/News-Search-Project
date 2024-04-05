@@ -1,0 +1,120 @@
+* {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+   }
+
+   body {
+       position: relative;
+   }
+
+   /* Global CSS */
+   .obj-width {
+       max-width: 1200px;
+       margin: auto;
+       padding: 0 20px;
+   }
+
+   nav {
+       background-color: cadetblue;
+       box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+   }
+
+   .navbar {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 1rem 0;
+   }
+
+   .navbar .logo {
+       color: aliceblue;
+       text-decoration: none;
+       letter-spacing: 2px;
+       font-size: 2rem;
+   }
+
+   .search-container {
+       display: flex; /* Ensure search input and button are in a row */
+   }
+
+   #search-input {
+       flex: 1; /* Take remaining space */
+       padding: 10px;
+       border: none;
+       border-radius: 5px;
+       font-size: 16px;
+       color: #333;
+   }
+
+   #search-button {
+       padding: 10px 20px;
+       background-color: #138065;
+       color: #fff;
+       border: none;
+       font-size: 16px;
+       cursor: pointer;
+       border-radius: 5px;
+       margin-left: 10px;
+   }
+
+   #blog-container {
+       padding: 2rem 0;
+       display: flex;
+       justify-content: center;
+       align-items: flex-start;
+       flex-wrap: wrap;
+   }
+
+   .blog-card {
+       flex: 0 1 calc(33.333% - 20px);
+       max-width: 300px; /* Increased max-width for better readability */
+       border: 1px solid #2d4c50;
+       border-radius: 10px;
+       cursor: pointer;
+       padding: 1rem;
+       margin: 10px;
+   }
+
+   .blog-card:hover {
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   }
+
+   .blog-card img {
+       width: 100%;
+       height: 200px;
+       object-fit: cover;
+       border-radius: 5px;
+       margin-bottom: 1rem;
+   }
+
+   .blog-card h2 {
+       color: #141414;
+       font-size: 1.5rem; /* Adjusted font size for better readability */
+       font-weight: 500;
+   }
+
+   .blog-card p {
+       font-size: 1rem; /* Adjusted font size for better readability */
+       line-height: 1.4;
+   }
+
+   @media (max-width: 768px) {
+       .navbar .logo {
+           font-size: 1.5rem; /* Adjusted font size for better readability */
+       }
+
+       #search-input {
+           padding: 10px; /* Adjusted padding */
+       }
+
+       .blog-card {
+           flex-basis: calc(50% - 20px); /* Two cards per row */
+       }
+   }
+
+   @media (max-width: 500px) {
+       .blog-card {
+           flex-basis: calc(100% - 20px); /* Single card per row */
+       }
+   }
